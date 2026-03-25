@@ -1,7 +1,7 @@
 import streamlit as st
 import difflib
 
-st.set_page_config(page_title="NeuroFix AI", page_icon="🧠", layout="centered")
+st.set_page_config(page_title="NeuroFix AI", layout="centered")
 st.markdown("""
 <style>
 body {
@@ -24,7 +24,7 @@ body {
 }
 </style>
 """, unsafe_allow_html=True)
-st.markdown("<div class='title'>🧠 NeuroFix AI</div>", unsafe_allow_html=True)
+st.markdown("<div class='title'> NeuroFix AI</div>", unsafe_allow_html=True)
 st.markdown("<div class='subtitle'>Context-Aware Text Correction System</div>", unsafe_allow_html=True)
 st.markdown("---")
 dictionary = [
@@ -71,7 +71,7 @@ if st.button(" Run Correction Engine"):
         accuracy = int(((total_words - changes) / total_words) * 100)
 
         st.markdown("---")
-        st.markdown(f"### 📊 Confidence Score: **{accuracy}%**")
+        st.markdown(f"###  Confidence Score: **{accuracy}%**")
 
         if accuracy > 80:
             st.success("High confidence correction")
